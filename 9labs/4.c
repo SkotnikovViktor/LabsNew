@@ -13,7 +13,7 @@ int main(void){
     int *count_pointer = &count; // Присваемаем адрес переменной
 
     // 1 способ 
-    printf("Value 1 - %d\n", *count_pointer);
+    printf("Value 1 - %d\n", *(&count));
 
     // 2 способ
     int **counter_pointer2 = &count_pointer;
@@ -24,6 +24,8 @@ int main(void){
     int ***counter_pointer3 = &counter_pointer2;
 
     printf("Value 3 - %d", ***counter_pointer3);
+
+
 
 
 

@@ -8,7 +8,7 @@ int main(void){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    signed int *test;
+    int *test;
 
     printf("Value pointer - %d\n", *test);
 

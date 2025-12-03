@@ -10,11 +10,11 @@ int main(void){
 
     int massive[7] = {1,2,3,4,5,6,7};
 
-    int *massive_pointer = &massive[4];
+    int massive_pointer = *massive;
 
-    *massive_pointer = 100;
+    //*massive_pointer = 100;
 
     for (int i = 0; i < 7; i++){
-        printf(" %d ", massive[i]);
+        printf(" %d ", *massive+i);
     }
 }

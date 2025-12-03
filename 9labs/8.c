@@ -15,20 +15,20 @@ int main(void){
 
     int *end_pointer = &massive[sizeof(massive) / sizeof(massive[0]) - 1];
 
-
-    int massive_index[sizeof(massive) / sizeof(massive[0])];
-    for (int i = 0; i < (sizeof(massive) / sizeof(massive[0])); i++){
+    int size = sizeof(massive) / sizeof(massive[0]);
+    int massive_index[size];
+    for (int i = 0; i < size; i++){
         massive_index[i] = (*end_pointer - *start_pointer++);
     }
 
-    for (int i = 0; i < (sizeof(massive) / sizeof(massive[0]) / 2); i++){
+    for (int i = 0; i < (size / 2); i++){
         int t = massive_index[i];
         massive_index[i] = massive_index[sizeof(massive) / sizeof(massive[0]) - i - 1];
         massive_index[sizeof(massive) / sizeof(massive[0]) - i - 1] = t;
     }
 
-    for (int i = 0; i < (sizeof(massive) / sizeof(massive[0])); i++){ // Для проверки
-        printf(" %d ", massive_index[i]);
+    for (int i = 0; i < size; i++){ // Для проверки
+        printf(" %d %d \n", massive_index[i], massive[i]);
     }
 
 }
