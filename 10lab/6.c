@@ -91,14 +91,20 @@ int main(void){
     int count = 31;
     int massive_binary[32] = {0};
 
-    scanf("%d", &number);
-
-
-    while (number != 0){
-        massive_binary[count] = number % 2;
-        number = number / 2;
-        count--;
+    int n = 0;
+    for (int i = 0; i < 14; i++){
+        scanf("%d", &n);
+        massive_binary[i] = n;
     }
+
+    //scanf("%d", &number);
+
+
+    //while (number != 0){
+     //   massive_binary[count] = number % 2;
+      //  number = number / 2;
+       // count--;
+    //}
 
     for (int i = 0; i < 32; i++){
         printf("%d", massive_binary[i]);

@@ -28,15 +28,15 @@ int main(void){
     }
 
 
-    
+
     printf("\n");
-    if (massive_binary[22] == 0){
-        printf("Равен 0!");
+    if (massive_binary[9] == 0){
+        printf("10 бит равен 0");
     }
 
 
     else{
-        printf("Равен 1!");
+        printf("10 бит равен 1");
     }
 
 }

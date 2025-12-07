@@ -41,7 +41,7 @@ int main(void){
     printf("\n");
 
     
-    massive_binary[n_index] = (int)(!massive_binary[n_index]);
+    massive_binary[32 - n_index] = (int)(!massive_binary[32 - n_index]);
 
     printf("После: ");
     for (int i = 0; i < 32; i++){
